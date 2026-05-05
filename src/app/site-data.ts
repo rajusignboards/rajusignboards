@@ -53,7 +53,7 @@ export const HERO_STATS: StatItem[] = [
   { value: '16+', label: 'Years in Business' },
   { value: '2000+', label: 'Projects Completed' },
   { value: '500+', label: 'Happy Clients' },
-  { value: '100%', label: 'Made in Hyderabad' },
+  { value: '100%', label: 'Made at our Factory' },
 ];
 
 export const HOME_SERVICES: ServiceItem[] = [
@@ -117,8 +117,7 @@ export const ALL_SERVICES: ServiceItem[] = [
   {
     icon: '&#128679;',
     title: 'Site Boards & Hoardings',
-    description:
-      'Large-format site hoardings and construction boards for builders and developers.',
+    description: 'Large-format site hoardings and construction boards for builders and developers.',
   },
   {
     icon: '&#127991;&#65039;',
@@ -128,8 +127,7 @@ export const ALL_SERVICES: ServiceItem[] = [
   {
     icon: '&#128293;',
     title: 'Backlit Signage',
-    description:
-      'Slim lightbox signs with even backlighting for malls, clinics, and showrooms.',
+    description: 'Slim lightbox signs with even backlighting for malls, clinics, and showrooms.',
   },
 ];
 
@@ -148,62 +146,68 @@ export const WHY_DESCRIPTIONS = [
 ];
 
 export const SERVICE_TICKERS = [
+  'Glass & ACP Cladding',
+  'Liquid LED Letters',
   'LED Channel Letters',
-  'Flex Boards',
-  'Neon Signs',
-  'Shop Boards',
-  '3D Letters',
-  'Hoardings',
+  'Neon / Acrylic Signs',
   'Digital Displays',
-  'Backlit Signs',
+  'Interior Branding',
+  'Backlit / Vinyl Boards',
 ];
 
 export const TIMELINE_ITEMS: TimelineItem[] = [
   {
-    shortYear: '08',
-    yearLabel: '2008 - The Beginning',
+    shortYear: '2008',
+    yearLabel: 'The Beginning',
     title: 'Started from scratch',
     description:
-      'Raju Sign Boards was founded with a single machine, a small rented workshop, and a big dream - to bring quality signage to every business in Hyderabad.',
+      'Raju Sign Boards was founded with a single machine, converted a room in our home into a workspace, We are the first Sign Board manufacturer in 3-5 districts around Karimnagar and a big dream - to bring quality signage to every business in Karimnagar.',
   },
   {
-    shortYear: '10',
-    yearLabel: '2010 - First Milestone',
+    shortYear: '2010',
+    yearLabel: 'First Milestone',
     title: '100 projects completed',
     description:
       'Word of mouth spread quickly. We crossed our first 100 clients and hired our first team of 5 skilled fabricators.',
   },
   {
-    shortYear: '13',
-    yearLabel: '2013 - Expansion',
+    shortYear: '2012',
+    yearLabel: 'Expansion',
     title: 'Moved to a bigger workshop',
     description:
       'Growing demand pushed us to expand. We moved into a larger production unit and added LED fabrication equipment.',
   },
   {
-    shortYear: '16',
-    yearLabel: '2016 - Digital Shift',
-    title: 'Embraced LED technology',
+    shortYear: '2015',
+    yearLabel: '500+ Clients',
+    title: 'A trusted name in Karimnagar',
     description:
-      'We invested in the latest LED channel letter and digital display technology, offering clients energy-efficient modern signage.',
+      'Crossed 500 satisfied clients spanning retail stores, hospitals, schools, and commercial complexes across Karimnagar.',
   },
   {
-    shortYear: '19',
-    yearLabel: '2019 - 500+ Clients',
-    title: 'A trusted name in Hyderabad',
+    shortYear: '2018',
+    yearLabel: 'Moved into our own factory',
+    title: 'Increased production capacity',
     description:
-      'Crossed 500 satisfied clients spanning retail stores, hospitals, schools, banks, and commercial complexes across Hyderabad.',
+      'Established our own factory with state-of-the-art machinery, allowing us to take on larger projects and ensure consistent quality control.',
   },
   {
-    shortYear: '22',
-    yearLabel: '2022 - 3D & Neon Era',
-    title: 'Launched 3D & neon sign services',
+    shortYear: '2020',
+    yearLabel: 'Started Glass & ACP Cladding',
+    title: 'Diversified services',
     description:
-      'Added acrylic neon signs and precision 3D letter fabrication, catering to new-age cafes, co-working spaces, and premium retail brands.',
+      'Responding to market demand, we added glass and ACP cladding services, becoming a one-stop solution for all signage and facade needs.',
   },
   {
-    shortYear: '25',
-    yearLabel: '2025 - Today',
+    shortYear: '2024',
+    yearLabel: 'Bought Liquid LED, Channel Bending, CNC machines',
+    title: 'A large investment in new technology',
+    description:
+      'To stay ahead of the curve, we invested in the latest liquid LED technology, channel bending machines, and CNC equipment, enhancing our capabilities and efficiency.',
+  },
+  {
+    shortYear: '2025',
+    yearLabel: 'Today',
     title: '2000+ projects & still growing',
     description:
       '16+ years in, with 2000+ completed projects, a full-fledged manufacturing unit, and a team committed to quality and after-sales service.',
@@ -211,29 +215,23 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [
+  { icon: '&#128161', title: 'Glass & ACP Cladding', tag: 'Glass & ACP Cladding' },
+  { icon: '&#128161', title: 'Liquid LED Letters', tag: 'Liquid LED Letters' },
   { icon: '&#128161;', title: 'LED Channel Letters', tag: 'LED Letters' },
-  { icon: '&#10024;', title: 'Neon Glow Sign', tag: 'Neon Signs' },
   { icon: '&#127970;', title: 'Commercial Hoarding', tag: 'Hoardings' },
   { icon: '&#128292;', title: '3D Acrylic Letters', tag: '3D Letters' },
   { icon: '&#128250;', title: 'Digital LED Display', tag: 'Digital Board' },
   { icon: '&#129691;', title: 'Shop Front Board', tag: 'Shop Boards' },
   { icon: '&#128293;', title: 'Backlit Lightbox', tag: 'Backlit' },
   { icon: '&#127991;&#65039;', title: 'Office Name Plate', tag: 'Name Plates' },
-  { icon: '&#128679;', title: 'Site Hoarding Board', tag: 'Site Boards' },
 ];
 
 export const CONTACT_INFO: ContactInfoItem[] = [
   {
     icon: '&#128205;',
     label: 'Location',
-    value: 'Hyderabad, Telangana',
+    value: 'Karimnagar, Telangana',
     subtext: 'Update with your full workshop address',
-  },
-  {
-    icon: '&#128222;',
-    label: 'Phone',
-    value: '+91 XXXXX XXXXX',
-    subtext: 'Mon - Sat, 9:00 AM to 7:00 PM',
   },
   {
     icon: '&#9993;&#65039;',
@@ -250,11 +248,12 @@ export const CONTACT_INFO: ContactInfoItem[] = [
 ];
 
 export const FOOTER_SERVICES = [
+  'Glass & ACP Cladding',
+  'Liquid LED Letters',
   'LED Channel Letters',
-  'Glow Sign Boards',
-  '3D Letters & Logos',
-  'Neon / Acrylic Signs',
   'Digital LED Displays',
+  'Neon / Acrylic Signs',
+  'Interior Branding',
 ];
 
 export const FOOTER_COMPANY = ['Home', 'Our Journey', 'Gallery', 'Contact Us'];
@@ -262,9 +261,8 @@ export const FOOTER_COMPANY = ['Home', 'Our Journey', 'Gallery', 'Contact Us'];
 export const FOOTER_CONTACTS: FooterContactItem[] = [
   {
     label: 'Address',
-    value: 'Your Workshop Address,\nHyderabad, Telangana - 500XXX',
+    value: 'Alkapuri Colony, Road no 4,\nKarimnagar - 505001, Telangana',
   },
-  { label: 'Phone', value: '+91 XXXXX XXXXX' },
-  { label: 'Email', value: 'info@rajusignboards.com' },
+  { label: 'Email', value: 'rajusignboards@gmail.com' },
   { label: 'Hours', value: 'Mon - Sat: 9 AM - 7 PM\nSunday: Closed' },
 ];

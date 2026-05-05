@@ -40,10 +40,6 @@
             <label class="ff-label" for="name">Your Name</label>
             <input class="ff-control" id="name" type="text" placeholder="e.g. Suresh Kumar" />
           </div>
-          <div class="ff">
-            <label class="ff-label" for="phone">Phone Number</label>
-            <input class="ff-control" id="phone" type="tel" placeholder="+91 XXXXX XXXXX" />
-          </div>
         </div>
 
         <div class="ff">
@@ -60,13 +56,13 @@
           <label class="ff-label" for="sign-type">Type of Sign Board</label>
           <select class="ff-control" id="sign-type">
             <option class="ff-option" value="">Select what you need...</option>
+            <option class="ff-option">Glass & ACP Cladding</option>
+            <option class="ff-option">Liquid LED Letters</option>
             <option class="ff-option">LED Channel Letters</option>
-            <option class="ff-option">Glow Sign Board</option>
             <option class="ff-option">Neon / Acrylic Sign</option>
-            <option class="ff-option">3D Letters / Logo</option>
             <option class="ff-option">Flex / Vinyl Banner</option>
             <option class="ff-option">Digital LED Display</option>
-            <option class="ff-option">Other / Not sure</option>
+            <option class="ff-option">Other</option>
           </select>
         </div>
 
@@ -85,9 +81,23 @@
   </section>
 
   <section class="map-strip">
-    <div class="map-content">
-      <div class="map-icon">&#128506;&#65039;</div>
-      <p class="map-copy">Google Map embed goes here - add your workshop location</p>
+    <div class="map-embed-shell">
+      <iframe
+        class="map-embed-frame"
+        [src]="googleMapsEmbedUrl"
+        title="Raju Sign Boards location map"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <a
+        class="map-link-chip"
+        [href]="googleMapsLink"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open Raju Sign Boards location in Google Maps"
+      >
+        Open in Google Maps &#8599;
+      </a>
     </div>
   </section>
 

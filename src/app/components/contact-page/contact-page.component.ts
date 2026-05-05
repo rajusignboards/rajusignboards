@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 import { CONTACT_INFO, PageId } from '../../site-data';
 import { SiteFooterComponent } from '../site-footer/site-footer.component';
@@ -12,7 +13,16 @@ import { SiteFooterComponent } from '../site-footer/site-footer.component';
   styleUrl: './contact-page.component.css',
 })
 export class ContactPageComponent {
+  private readonly sanitizer = inject(DomSanitizer);
+  private readonly googleMapsPlaceQuery =
+    'Raju Sign Boards, Alkapuri Colony, Road no 4, Karimnagar - 505001, Telangana';
+
   @Output() pageChange = new EventEmitter<PageId>();
 
   protected readonly contactInfo = CONTACT_INFO;
+  protected readonly googleMapsLink =
+    'https://maps.app.goo.gl/7CXX8nL1cc3yD7MNA?g_st=aw';
+  protected readonly googleMapsEmbedUrl: SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+    `https://www.google.com/maps?q=${encodeURIComponent(this.googleMapsPlaceQuery)}&t=k&z=18&output=embed`,
+  );
 }
