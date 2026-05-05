@@ -1,0 +1,95 @@
+<section class="page-section">
+  <section class="contact-hero">
+    <div class="badge-pill">Free site visit & quote within 24 hours</div>
+    <h1 class="contact-title">
+      Get in Touch with
+      <br />
+      <span class="contact-title-accent">Raju Sign Boards</span>
+    </h1>
+    <p class="contact-copy">
+      Tell us what you need and our team will reach out with a free quote and site visit.
+    </p>
+  </section>
+
+  <section class="contact-body">
+    <div class="contact-grid">
+      <div class="info-cards">
+        @for (item of contactInfo; track item.label) {
+          <article class="info-card">
+            <div class="ic-icon" [innerHTML]="item.icon"></div>
+            <div>
+              <div class="ic-label">{{ item.label }}</div>
+              <div class="ic-val">{{ item.value }}</div>
+              <div class="ic-sub">{{ item.subtext }}</div>
+            </div>
+          </article>
+        }
+
+        <button class="wa-btn nav-button-reset" type="button">
+          <span class="wa-icon">&#128172;</span>
+          Chat on WhatsApp
+        </button>
+      </div>
+
+      <form class="form-card">
+        <h2 class="form-title">Send us an enquiry</h2>
+        <p class="form-copy">Fill in the details and our team will get back to you shortly.</p>
+
+        <div class="form-row">
+          <div class="ff">
+            <label class="ff-label" for="name">Your Name</label>
+            <input class="ff-control" id="name" type="text" placeholder="e.g. Suresh Kumar" />
+          </div>
+          <div class="ff">
+            <label class="ff-label" for="phone">Phone Number</label>
+            <input class="ff-control" id="phone" type="tel" placeholder="+91 XXXXX XXXXX" />
+          </div>
+        </div>
+
+        <div class="ff">
+          <label class="ff-label" for="business">Business / Shop Name</label>
+          <input
+            class="ff-control"
+            id="business"
+            type="text"
+            placeholder="e.g. Sri Venkateshwara Traders"
+          />
+        </div>
+
+        <div class="ff">
+          <label class="ff-label" for="sign-type">Type of Sign Board</label>
+          <select class="ff-control" id="sign-type">
+            <option class="ff-option" value="">Select what you need...</option>
+            <option class="ff-option">LED Channel Letters</option>
+            <option class="ff-option">Glow Sign Board</option>
+            <option class="ff-option">Neon / Acrylic Sign</option>
+            <option class="ff-option">3D Letters / Logo</option>
+            <option class="ff-option">Flex / Vinyl Banner</option>
+            <option class="ff-option">Digital LED Display</option>
+            <option class="ff-option">Other / Not sure</option>
+          </select>
+        </div>
+
+        <div class="ff">
+          <label class="ff-label" for="message">Your Message</label>
+          <textarea
+            class="ff-control ff-control-textarea"
+            id="message"
+            placeholder="Tell us the size, location, any references or requirements..."
+          ></textarea>
+        </div>
+
+        <button class="sub-btn nav-button-reset" type="submit">Submit Enquiry &#8594;</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="map-strip">
+    <div class="map-content">
+      <div class="map-icon">&#128506;&#65039;</div>
+      <p class="map-copy">Google Map embed goes here - add your workshop location</p>
+    </div>
+  </section>
+
+  <app-site-footer (pageChange)="pageChange.emit($event)" />
+</section>

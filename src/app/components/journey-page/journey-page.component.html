@@ -1,0 +1,24 @@
+<section class="page-section">
+  <section class="page-hero page-hero-centered">
+    <div class="sec-label">Our Story</div>
+    <h1 class="sec-title journey-title">A Journey of 16+ Years</h1>
+    <p class="sec-sub journey-sub">
+      From a small workshop to one of Hyderabad's most trusted sign board manufacturers.
+    </p>
+  </section>
+
+  <section class="section section-journey">
+    <div class="timeline">
+      @for (item of timelineItems; track item.yearLabel) {
+        <article class="tl-item">
+          <div class="tl-dot">{{ item.shortYear }}</div>
+          <div class="tl-content">
+            <div class="tl-year">{{ item.yearLabel }}</div>
+            <h3 class="tl-title">{{ item.title }}</h3>
+            <p class="tl-desc">{{ item.description }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+</section>

@@ -1,0 +1,26 @@
+<section class="page-section">
+  <section class="page-hero page-hero-centered">
+    <div class="sec-label">Our Work</div>
+    <h1 class="sec-title gallery-title">Project Gallery</h1>
+    <p class="sec-sub gallery-sub">
+      A glimpse of sign boards we've crafted over the years for businesses across
+      Hyderabad.
+    </p>
+  </section>
+
+  <section class="section section-gallery">
+    <div class="gallery-grid">
+      @for (item of galleryItems; track item.title) {
+        <article class="g-card">
+          <span class="gallery-icon" [innerHTML]="item.icon"></span>
+          <p class="gallery-card-copy">{{ item.title }}</p>
+          <div class="g-tag">{{ item.tag }}</div>
+        </article>
+      }
+    </div>
+
+    <p class="gallery-note">
+      &#128248; Upload your actual project photos to replace these placeholders
+    </p>
+  </section>
+</section>

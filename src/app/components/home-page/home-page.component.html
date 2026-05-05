@@ -1,0 +1,68 @@
+<section class="page-section">
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-badge">&#9733; Established 2008 - Hyderabad, Telangana</div>
+      <h1 class="hero-title">
+        Illuminate Your
+        <br />
+        <span class="hero-title-accent">Brand Identity</span>
+        <br />
+        with LED Sign Boards
+      </h1>
+      <p class="hero-copy">
+        From shop fronts to large hoardings - we craft premium LED signage that makes your
+        business impossible to miss, day or night.
+      </p>
+      <div class="hero-btns">
+        <button
+          class="btn-primary nav-button-reset"
+          type="button"
+          (click)="pageChange.emit('services')"
+        >
+          Explore Our Work
+        </button>
+        <button
+          class="btn-outline nav-button-reset"
+          type="button"
+          (click)="pageChange.emit('journey')"
+        >
+          Our Journey
+        </button>
+      </div>
+      <div class="hero-stats">
+        @for (stat of heroStats; track stat.label) {
+          <div>
+            <div class="stat-val">{{ stat.value }}</div>
+            <div class="stat-lbl">{{ stat.label }}</div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="strip-inner">
+      @for (item of tickerItems; track $index) {
+        <span class="strip-item">{{ item }}</span>
+      }
+      @for (item of tickerItems; track 'dup-' + $index) {
+        <span class="strip-item">{{ item }}</span>
+      }
+    </div>
+  </div>
+
+  <section class="section section-home-why">
+    <div class="sec-label">Why Choose Us</div>
+    <h2 class="sec-title why-title">Built on Trust & Quality</h2>
+    <div class="why-grid">
+      @for (item of whyItems; track item.label; let i = $index) {
+        <article class="why-item">
+          <div class="why-num">{{ item.value }}</div>
+          <h4 class="why-item-title">{{ item.label }}</h4>
+          <p class="why-item-copy">{{ whyDescriptions[i] }}</p>
+        </article>
+      }
+    </div>
+  </section>
+</section>

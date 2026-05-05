@@ -1,0 +1,25 @@
+<nav class="site-nav">
+  <button class="nav-logo nav-button-reset" type="button" (click)="pageChange.emit('home')">
+    <span class="logo-icon">R</span>
+    <span class="nav-logo-text"><span class="nav-logo-accent">Raju</span> Sign Boards</span>
+  </button>
+
+  <ul class="nav-links nav-list-reset">
+    @for (item of navItems; track item.id) {
+      <li class="nav-item">
+        <button
+          class="nav-link-button nav-button-reset"
+          type="button"
+          [class.active]="item.id === currentPage"
+          (click)="pageChange.emit(item.id)"
+        >
+          {{ item.label }}
+        </button>
+      </li>
+    }
+  </ul>
+
+  <button class="nav-cta nav-button-reset" type="button" (click)="pageChange.emit('contact')">
+    Get a Quote
+  </button>
+</nav>
