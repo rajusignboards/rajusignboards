@@ -1,1 +1,85 @@
-/* Component-specific styles can be added here. */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 5%;
+  background: #0a0a0a;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.nav-logo,
+.nav-link-button,
+.nav-cta {
+  cursor: pointer;
+}
+
+.nav-logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #fff;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  background: #f59e0b;
+  border-radius: 6px;
+}
+
+.nav-logo-text {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.nav-logo-accent {
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-link-button {
+  padding: 6px 12px;
+  color: #aaa;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.nav-link-button:hover {
+  color: #fff;
+  background: #1a1a1a;
+}
+
+.nav-link-button.active {
+  color: #f59e0b;
+}
+
+.nav-cta {
+  padding: 8px 18px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  background: #f59e0b;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}

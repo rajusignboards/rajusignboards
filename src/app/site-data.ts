@@ -81,6 +81,18 @@ export const HOME_SERVICES: ServiceItem[] = [
 
 export const ALL_SERVICES: ServiceItem[] = [
   {
+    icon: '&#127970;',
+    title: 'Glass & ACP Cladding',
+    description:
+      'Durable and stylish cladding solutions for commercial facades.', 
+  },
+  {
+    icon: '&#128161;',
+    title: 'Liquid LED Letters',
+    description:
+      'Bright, smooth & seamless illuminated letters for a modern look on any storefront.',
+  },
+  {
     icon: '&#128161;',
     title: 'LED Channel Letters',
     description:
@@ -99,17 +111,6 @@ export const ALL_SERVICES: ServiceItem[] = [
       'Vibrant LED neon and laser-cut acrylic signs for cafes, salons, and modern retail spaces.',
   },
   {
-    icon: '&#127970;',
-    title: 'Glow Sign Boards',
-    description: 'Backlit and front-lit glow sign boards for 24/7 brand visibility.',
-  },
-  {
-    icon: '&#128292;',
-    title: '3D Lettering & Logos',
-    description:
-      'Fabricated metal, PVC, and foam 3D letters and logo cutouts with optional LED backlighting.',
-  },
-  {
     icon: '&#128250;',
     title: 'Digital LED Displays',
     description: 'Programmable LED boards for running text, promotions, and dynamic content.',
@@ -120,29 +121,30 @@ export const ALL_SERVICES: ServiceItem[] = [
     description: 'Large-format site hoardings and construction boards for builders and developers.',
   },
   {
-    icon: '&#127991;&#65039;',
-    title: 'Name Plates & Directories',
-    description: 'Office name plates, building directories, and door signs in acrylic and metal.',
-  },
-  {
     icon: '&#128293;',
-    title: 'Backlit Signage',
+    title: 'Flex & Vinyl Signage',
     description: 'Slim lightbox signs with even backlighting for malls, clinics, and showrooms.',
   },
+  {
+    icon: '&#128161;',
+    title: 'Interior Branding',
+    description:
+      'Custom interior signage solutions including wayfinding, wall graphics, and branded decor.',
+  }
 ];
 
 export const WHY_ITEMS: StatItem[] = [
   { value: '16+', label: 'Years of Experience' },
   { value: '2000+', label: 'Projects Delivered' },
-  { value: '48hr', label: 'Quick Turnaround' },
-  { value: '1yr', label: 'Service Warranty' },
+  { value: '1 week', label: 'Quick Turnaround' },
+  { value: '1yr', label: 'Free Service' },
 ];
 
 export const WHY_DESCRIPTIONS = [
   'Deep expertise in all types of signage manufacturing.',
   'From small shops to large commercial buildings.',
-  'Most sign boards delivered within 48 hours.',
-  'All LED products come with 1-year after-sales service.',
+  'Most sign boards delivered within 1 week.',
+  'We stand by our work with a 1-year free service.',
 ];
 
 export const SERVICE_TICKERS = [
@@ -218,12 +220,11 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   { icon: '&#128161', title: 'Glass & ACP Cladding', tag: 'Glass & ACP Cladding' },
   { icon: '&#128161', title: 'Liquid LED Letters', tag: 'Liquid LED Letters' },
   { icon: '&#128161;', title: 'LED Channel Letters', tag: 'LED Letters' },
-  { icon: '&#127970;', title: 'Commercial Hoarding', tag: 'Hoardings' },
   { icon: '&#128292;', title: '3D Acrylic Letters', tag: '3D Letters' },
   { icon: '&#128250;', title: 'Digital LED Display', tag: 'Digital Board' },
   { icon: '&#129691;', title: 'Shop Front Board', tag: 'Shop Boards' },
   { icon: '&#128293;', title: 'Backlit Lightbox', tag: 'Backlit' },
-  { icon: '&#127991;&#65039;', title: 'Office Name Plate', tag: 'Name Plates' },
+  { icon: '&#127991;&#65039;', title: 'Interior Branding', tag: 'Interior Branding' },
 ];
 
 export const CONTACT_INFO: ContactInfoItem[] = [

@@ -1,1 +1,113 @@
-/* Component-specific styles can be added here. */
+.page-section {
+  display: block;
+}
+
+.page-hero {
+  padding: 60px 5% 40px;
+  background: #0a0a0a;
+}
+
+.page-hero-centered {
+  text-align: center;
+}
+
+.page-hero-centered .sec-title,
+.page-hero-centered .sec-sub {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.sec-label {
+  margin-bottom: 10px;
+  color: #f59e0b;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sec-title {
+  margin-bottom: 14px;
+  color: #fff;
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 500;
+}
+
+.sec-sub {
+  max-width: 500px;
+  color: #777;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.section {
+  padding: 80px 5%;
+  background: #111;
+}
+
+.section-journey {
+  padding-top: 40px;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 52px;
+}
+
+.timeline::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 19px;
+  width: 2px;
+  content: "";
+  background: rgba(245, 158, 11, 0.2);
+}
+
+.tl-item {
+  position: relative;
+  display: flex;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.tl-dot {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #f59e0b;
+  font-size: 11px;
+  font-weight: 500;
+  background: rgba(245, 158, 11, 0.12);
+  border: 2px solid #f59e0b;
+  border-radius: 50%;
+}
+
+.tl-content {
+  padding-top: 8px;
+}
+
+.tl-year {
+  margin-bottom: 4px;
+  color: #f59e0b;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tl-title {
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tl-desc {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.6;
+}
