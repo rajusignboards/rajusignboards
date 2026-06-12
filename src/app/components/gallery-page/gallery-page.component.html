@@ -1,8 +1,8 @@
 <section class="page-section">
   <section class="page-hero page-hero-centered">
     <div class="sec-label">Our Work</div>
-    <h1 class="sec-title gallery-title">Project Gallery</h1>
-    <p class="sec-sub gallery-sub">
+    <h1 class="sec-title">Project Gallery</h1>
+    <p class="sec-sub">
       A glimpse of sign boards we've crafted over the years for businesses across Karimnagar.
     </p>
   </section>
@@ -11,11 +11,51 @@
     <div class="gallery-grid">
       @for (item of galleryItems; track item.title) {
         <article class="g-card">
-          <span class="gallery-icon" [innerHTML]="item.icon"></span>
-          <p class="gallery-card-copy">{{ item.title }}</p>
-          <div class="g-tag">{{ item.tag }}</div>
+          <!-- Main area -->
+          <div class="g-body">
+            @if (item.images.length > 0) {
+              <img class="g-main-image" [src]="item.images[0]" [alt]="item.title" />
+            } @else {
+              <span class="gallery-icon" [innerHTML]="item.icon"></span>
+              <p class="g-title">{{ item.title }}</p>
+            }
+          </div>
+
+          <!-- Bottom strip -->
+          <div class="g-footer">
+            <span class="g-tag">{{ item.tag }}</span>
+            <button class="g-view-more" (click)="openModal(item)">View More &#8594;</button>
+          </div>
         </article>
       }
     </div>
   </section>
 </section>
+
+<!-- Modal -->
+@if (activeCategory()) {
+  <div class="modal-backdrop" (click)="onBackdropClick($event)">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">{{ activeCategory()!.title }}</h2>
+        <button class="modal-close" (click)="closeModal()" aria-label="Close">&#10005;</button>
+      </div>
+
+      <div class="modal-body">
+        @if (activeCategory()!.images.length > 0) {
+          <div class="modal-grid">
+            @for (img of activeCategory()!.images; track img) {
+              <img class="modal-img" [src]="img" [alt]="activeCategory()!.title" />
+            }
+          </div>
+        } @else {
+          <div class="modal-empty">
+            <span class="modal-empty-icon" [innerHTML]="activeCategory()!.icon"></span>
+            <p>Images coming soon for <strong>{{ activeCategory()!.title }}</strong>.</p>
+            <p class="modal-empty-sub">Check back after uploading photos to the <code>images</code> array in <code>site-data.ts</code>.</p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+}

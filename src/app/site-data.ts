@@ -27,6 +27,7 @@ export interface GalleryItem {
   icon: string;
   title: string;
   tag: string;
+  images: string[];
 }
 
 export interface ContactInfoItem {
@@ -208,7 +209,7 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
       'To stay ahead of the curve, we invested in the latest liquid LED technology, channel bending machines, and CNC equipment, enhancing our capabilities and efficiency.',
   },
   {
-    shortYear: '2025',
+    shortYear: '2026',
     yearLabel: 'Today',
     title: '2000+ projects & still growing',
     description:
@@ -217,14 +218,14 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [
-  { icon: '&#128161', title: 'Glass & ACP Cladding', tag: 'Glass & ACP Cladding' },
-  { icon: '&#128161', title: 'Liquid LED Letters', tag: 'Liquid LED Letters' },
-  { icon: '&#128161;', title: 'LED Channel Letters', tag: 'LED Letters' },
-  { icon: '&#128292;', title: '3D Acrylic Letters', tag: '3D Letters' },
-  { icon: '&#128250;', title: 'Digital LED Display', tag: 'Digital Board' },
-  { icon: '&#129691;', title: 'Shop Front Board', tag: 'Shop Boards' },
-  { icon: '&#128293;', title: 'Backlit Lightbox', tag: 'Backlit' },
-  { icon: '&#127991;&#65039;', title: 'Interior Branding', tag: 'Interior Branding' },
+  { icon: '&#127970;', title: 'Glass & ACP Cladding', tag: 'Glass & ACP Cladding', images: [] },
+  { icon: '&#128161;', title: 'Liquid LED Letters', tag: 'Liquid LED Letters', images: [] },
+  { icon: '&#128161;', title: 'LED Channel Letters', tag: 'LED Letters', images: [] },
+  { icon: '&#128292;', title: '3D Acrylic Letters', tag: '3D Letters', images: [] },
+  { icon: '&#128250;', title: 'Digital LED Display', tag: 'Digital Board', images: [] },
+  { icon: '&#129691;', title: 'Shop Front Board', tag: 'Shop Boards', images: [] },
+  { icon: '&#128293;', title: 'Backlit Lightbox', tag: 'Backlit', images: [] },
+  { icon: '&#127991;&#65039;', title: 'Interior Branding', tag: 'Interior Branding', images: [] },
 ];
 
 export const CONTACT_INFO: ContactInfoItem[] = [
@@ -232,13 +233,13 @@ export const CONTACT_INFO: ContactInfoItem[] = [
     icon: '&#128205;',
     label: 'Location',
     value: 'Karimnagar, Telangana',
-    subtext: 'Update with your full workshop address',
+    subtext: '',
   },
   {
     icon: '&#9993;&#65039;',
     label: 'Email',
-    value: 'info@rajusignboards.com',
-    subtext: 'We reply within 24 hours',
+    value: 'rajusignboards@gmail.com',
+    subtext: '',
   },
   {
     icon: '&#128336;',

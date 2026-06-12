@@ -25,4 +25,41 @@ export class ContactPageComponent {
   protected readonly googleMapsEmbedUrl: SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
     `https://www.google.com/maps?q=${encodeURIComponent(this.googleMapsPlaceQuery)}&t=k&z=18&output=embed`,
   );
+
+  protected isSubmitting = false;
+  protected submitStatus: 'idle' | 'success' | 'error' = 'idle';
+
+  protected async onSubmit(event: Event, form: HTMLFormElement): Promise<void> {
+    event.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    this.isSubmitting = true;
+    this.submitStatus = 'idle';
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/s.laxmiprasad2006@gmail.com', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+        },
+        body: formData,
+      });
+
+      if (response.ok) {
+        this.submitStatus = 'success';
+        form.reset();
+      } else {
+        this.submitStatus = 'error';
+      }
+    } catch (error) {
+      this.submitStatus = 'error';
+    } finally {
+      this.isSubmitting = false;
+    }
+  }
 }
