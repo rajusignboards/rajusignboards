@@ -219,7 +219,7 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   { icon: '&#127970;', title: 'Glass & ACP Cladding', tag: 'Glass & ACP Cladding', images: [] },
-  { icon: '&#128161;', title: 'Liquid LED Letters', tag: 'Liquid LED Letters', images: [] },
+  { icon: '&#128161;', title: 'Liquid LED Letters', tag: 'Liquid LED Letters', images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781798013/WhatsApp_Image_2026-06-18_at_21.05.45_if1oq7.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798110/WhatsApp_Image_2026-06-18_at_21.05.45_1_cwydir.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798109/WhatsApp_Image_2026-06-18_at_21.05.46_qtdy1r.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798156/WhatsApp_Image_2026-06-18_at_21.05.47_bxotdi.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798108/WhatsApp_Image_2026-06-18_at_21.05.48_q6ncv9.jpg'] },
   { icon: '&#128161;', title: 'LED Channel Letters', tag: 'LED Letters', images: [] },
   { icon: '&#128292;', title: '3D Acrylic Letters', tag: '3D Letters', images: [] },
   { icon: '&#128250;', title: 'Digital LED Display', tag: 'Digital Board', images: [] },

@@ -45,7 +45,7 @@
         @if (activeCategory()!.images.length > 0) {
           <div class="modal-grid">
             @for (img of activeCategory()!.images; track img) {
-              <img class="modal-img" [src]="img" [alt]="activeCategory()!.title" />
+              <img class="modal-img" [src]="img" [alt]="activeCategory()!.title" (click)="openLightbox(img)" />
             }
           </div>
         } @else {
@@ -57,5 +57,22 @@
         }
       </div>
     </div>
+  </div>
+}
+
+<!-- Lightbox -->
+@if (activeImage()) {
+  <div class="lightbox-backdrop" (click)="closeLightbox()">
+    <img class="lightbox-img" [src]="activeImage()!" alt="Full view" (click)="$event.stopPropagation()" />
+
+    @if ((activeCategory()?.images?.length ?? 0) > 1) {
+      <button class="lightbox-nav lightbox-prev" (click)="$event.stopPropagation(); prevImage()" aria-label="Previous">&#8592;</button>
+      <button class="lightbox-nav lightbox-next" (click)="$event.stopPropagation(); nextImage()" aria-label="Next">&#8594;</button>
+      <div class="lightbox-counter" (click)="$event.stopPropagation()">
+        {{ activeImageIndex() + 1 }} / {{ activeCategory()!.images.length }}
+      </div>
+    }
+
+    <button class="lightbox-close" (click)="closeLightbox()" aria-label="Close">&#10005;</button>
   </div>
 }

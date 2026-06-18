@@ -81,7 +81,7 @@
   gap: 10px;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   padding: 24px 16px;
   overflow: hidden;
 }
@@ -217,6 +217,12 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 8px;
+  cursor: zoom-in;
+  transition: opacity 0.15s;
+}
+
+.modal-img:hover {
+  opacity: 0.85;
 }
 
 /* Empty state */
@@ -255,6 +261,93 @@
   font-size: 11px;
   background: #1e1e1e;
   border-radius: 4px;
+}
+
+/* ── Lightbox ── */
+
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.95);
+  cursor: zoom-out;
+}
+
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 6px;
+  cursor: default;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #fff;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 14px;
+  color: #ccc;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 20px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #ccc;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
 /* ── Responsive ── */
