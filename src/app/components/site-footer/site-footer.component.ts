@@ -19,5 +19,5 @@ export class SiteFooterComponent {
   protected readonly footerServices = FOOTER_SERVICES;
   protected readonly footerCompany = FOOTER_COMPANY;
   protected readonly footerContacts = FOOTER_CONTACTS;
-  protected readonly companyLinks: PageId[] = ['home', 'journey', 'gallery', 'contact'];
+  protected readonly companyLinks: PageId[] = ['home', 'journey', 'contact'];
 }

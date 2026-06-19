@@ -3,8 +3,9 @@
 }
 
 .page-hero {
-  padding: 60px 5% 40px;
-  background: #0a0a0a;
+  padding: 80px 5% 60px;
+  background: linear-gradient(180deg, #ffffff 0%, #fefce8 100%);
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .page-hero-centered {
@@ -20,55 +21,67 @@
 
 .sec-label {
   margin-bottom: 10px;
-  color: #f59e0b;
+  color: #d97706;
   font-size: 11px;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .sec-title {
   margin-bottom: 14px;
-  color: #fff;
-  font-size: clamp(24px, 3.5vw, 36px);
-  font-weight: 500;
+  color: #0f172a;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .sec-sub {
   max-width: 500px;
-  color: #777;
+  color: #64748b;
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .section {
   padding: 80px 5%;
-  background: #111;
+  background: #f8fafc;
 }
 
 .section-journey {
-  padding-top: 40px;
+  padding-top: 48px;
 }
 
 .timeline {
   position: relative;
   margin-top: 52px;
+  max-width: 700px;
 }
 
 .timeline::before {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 19px;
-  width: 2px;
-  content: "";
-  background: rgba(245, 158, 11, 0.2);
+  left: 21px;
+  width: 3px;
+  content: '';
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #d97706   0px,
+      #fbbf24  10px,
+      transparent 10px,
+      transparent 20px
+    );
+  border-radius: 4px;
 }
 
 .tl-item {
   position: relative;
   display: flex;
-  gap: 28px;
-  margin-bottom: 40px;
+  gap: 32px;
+  margin-bottom: 48px;
 }
 
 .tl-dot {
@@ -78,36 +91,45 @@
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  color: #f59e0b;
-  font-size: 11px;
-  font-weight: 500;
-  background: rgba(245, 158, 11, 0.12);
-  border: 2px solid #f59e0b;
+  width: 46px;
+  height: 46px;
+  color: #92400e;
+  font-size: 10px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2.5px solid #d97706;
   border-radius: 50%;
+  box-shadow:
+    0 0 0 4px #f8fafc,
+    0 0 0 7px rgba(217, 119, 6, 0.25),
+    0 0 16px rgba(217, 119, 6, 0.2);
 }
 
 .tl-content {
   padding-top: 8px;
+  padding-left: 4px;
 }
 
 .tl-year {
   margin-bottom: 4px;
-  color: #f59e0b;
-  font-size: 12px;
-  font-weight: 500;
+  color: #d97706;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .tl-title {
   margin-bottom: 8px;
-  color: #fff;
+  color: #0f172a;
+  font-family: 'Outfit', sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .tl-desc {
-  color: #666;
+  color: #64748b;
   font-size: 13px;
-  line-height: 1.6;
+  line-height: 1.68;
 }
+

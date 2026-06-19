@@ -1,0 +1,140 @@
+.page-section { display: block; }
+
+.page-hero {
+  padding: 80px 5% 60px;
+  background: linear-gradient(180deg, #ffffff 0%, #fefce8 100%);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.page-hero-centered { text-align: center; }
+
+.page-hero-centered .sec-title,
+.page-hero-centered .sec-sub {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.sec-label {
+  margin-bottom: 10px;
+  color: #d97706;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sec-title {
+  margin-bottom: 14px;
+  color: #0f172a;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sec-sub {
+  max-width: 500px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* ── Process section ── */
+
+.section {
+  padding: 80px 5%;
+}
+
+.section-process {
+  background: #0f172a;
+  padding: 88px 5%;
+  text-align: center;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.ps-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.ps-top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ps-circle {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d97706, #fbbf24);
+  box-shadow: 0 6px 28px rgba(217, 119, 6, 0.45);
+  margin: 0 auto;
+}
+
+.ps-num {
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.ps-connector {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(217, 119, 6, 0.6), rgba(251, 191, 36, 0.25));
+}
+
+.ps-step-last .ps-top { justify-content: center; }
+
+.ps-icon {
+  font-size: 34px;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.ps-title {
+  margin-bottom: 12px;
+  color: #f1f5f9;
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.ps-desc {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.72;
+  max-width: 190px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .process-steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 16px;
+  }
+
+  .ps-connector { display: none; }
+  .ps-top { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .process-steps { grid-template-columns: 1fr; gap: 40px; }
+}

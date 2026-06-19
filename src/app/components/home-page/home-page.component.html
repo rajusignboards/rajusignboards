@@ -1,59 +1,102 @@
 <section class="page-section">
-  <section class="hero">
-    <div class="hero-glow"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">
-        Illuminate Your
-        <br />
-        <span class="hero-title-accent">Brand Identity</span>
-        <br />
-        With LED Sign Boards
-      </h1>
-      <p class="hero-copy">
-        From shop fronts to large hoardings - we craft premium LED signage that makes your
-        business impossible to miss, day or night.
-      </p>
-      <div class="hero-btns">
-        <button
-          class="btn-primary nav-button-reset"
-          type="button"
-          (click)="pageChange.emit('gallery')"
-        >
-          Explore Our Work
-        </button>
-        <button
-          class="btn-outline nav-button-reset"
-          type="button"
-          (click)="pageChange.emit('journey')"
-        >
-          Our Journey
-        </button>
+
+  <!-- ── 100vh viewport: hero + ticker ── -->
+  <div class="hero-viewport">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Make Your Business
+          <br />
+          <span class="hero-title-accent">Impossible to Miss</span>
+          <br />
+          Day or Night
+        </h1>
+        <p class="hero-copy">
+          From shop fronts to large hoardings - we craft premium LED signage that makes your
+          business impossible to miss, day or night.
+        </p>
+        <div class="hero-btns">
+          <button
+            class="btn-primary nav-button-reset"
+            type="button"
+            (click)="pageChange.emit('services')"
+          >
+            Explore Our Work
+          </button>
+          <button
+            class="btn-outline nav-button-reset"
+            type="button"
+            (click)="pageChange.emit('journey')"
+          >
+            Our Journey
+          </button>
+        </div>
+        <div class="hero-stats">
+          @for (stat of heroStats; track stat.label) {
+            <div>
+              <div class="stat-val">{{ stat.value }}</div>
+              <div class="stat-lbl">{{ stat.label }}</div>
+            </div>
+          }
+        </div>
       </div>
-      <div class="hero-stats">
-        @for (stat of heroStats; track stat.label) {
-          <div>
-            <div class="stat-val">{{ stat.value }}</div>
-            <div class="stat-lbl">{{ stat.label }}</div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hv-orb"></div>
+
+        <div class="hv-card hv-card-1">
+          <span class="hv-icon">🪟</span>
+          <div class="hv-info">
+            <span class="hv-name">Glass & ACP Cladding</span>
+            <span class="hv-desc">For Premium Elevation Design</span>
           </div>
+        </div>
+
+        <div class="hv-card hv-card-2">
+          <span class="hv-icon">✨</span>
+          <div class="hv-info">
+            <span class="hv-name">LED Channel Letters</span>
+            <span class="hv-desc">3D embossed acrylic signage</span>
+          </div>
+        </div>
+
+        <div class="hv-card hv-card-3">
+          <span class="hv-icon">💡</span>
+          <div class="hv-info">
+            <span class="hv-name">Liquid LED Letters</span>
+            <span class="hv-desc">Modern illuminated signage</span>
+          </div>
+        </div>
+
+        <div class="hv-badge">
+          <span class="hv-badge-num">16+</span>
+          <span class="hv-badge-lbl">Years of<br />Trust</span>
+        </div>
+
+        <div class="hv-dot hv-dot-a"></div>
+        <div class="hv-dot hv-dot-b"></div>
+        <div class="hv-dot hv-dot-c"></div>
+      </div>
+    </section>
+
+    <!-- Ticker pinned to bottom of 100vh ── -->
+    <div class="strip">
+      <div class="strip-inner">
+        @for (item of tickerItems; track $index) {
+          <span class="strip-item">{{ item }}</span>
+        }
+        @for (item of tickerItems; track 'dup-' + $index) {
+          <span class="strip-item">{{ item }}</span>
         }
       </div>
     </div>
-  </section>
-
-  <div class="strip">
-    <div class="strip-inner">
-      @for (item of tickerItems; track $index) {
-        <span class="strip-item">{{ item }}</span>
-      }
-      @for (item of tickerItems; track 'dup-' + $index) {
-        <span class="strip-item">{{ item }}</span>
-      }
-    </div>
   </div>
 
+  <!-- ── Why Choose Us ── -->
   <section class="section section-home-why">
     <div class="sec-label">Why Choose Us</div>
-    <h2 class="sec-title why-title">Built on Trust & Quality</h2>
+    <h2 class="sec-title">Built on Trust & Quality</h2>
     <div class="why-grid">
       @for (item of whyItems; track item.label; let i = $index) {
         <article class="why-item">
@@ -64,4 +107,6 @@
       }
     </div>
   </section>
+
+
 </section>

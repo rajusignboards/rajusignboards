@@ -1,5 +1,5 @@
 <nav class="site-nav">
-  <button class="nav-logo nav-button-reset" type="button" (click)="pageChange.emit('home')">
+  <button class="nav-logo nav-button-reset" type="button" (click)="navigate('home')">
     <img class="logo-img" src="logo.png" alt="Raju Sign Boards" />
     <span class="nav-logo-text"><span class="nav-logo-accent">Raju</span> Sign Boards</span>
   </button>
@@ -11,7 +11,7 @@
           class="nav-link-button nav-button-reset"
           type="button"
           [class.active]="item.id === currentPage"
-          (click)="pageChange.emit(item.id)"
+          (click)="navigate(item.id)"
         >
           {{ item.label }}
         </button>
@@ -19,7 +19,38 @@
     }
   </ul>
 
-  <button class="nav-cta nav-button-reset" type="button" (click)="pageChange.emit('contact')">
-    Get a Quote
-  </button>
+  <div class="nav-right">
+    <button class="nav-cta nav-button-reset" type="button" (click)="navigate('contact')">
+      Get a Quote
+    </button>
+    <button
+      class="hamburger nav-button-reset"
+      type="button"
+      [attr.aria-expanded]="menuOpen()"
+      aria-label="Toggle menu"
+      (click)="toggleMenu()"
+    >
+      <span class="ham-bar"></span>
+      <span class="ham-bar"></span>
+      <span class="ham-bar"></span>
+    </button>
+  </div>
 </nav>
+
+@if (menuOpen()) {
+  <div class="mobile-menu">
+    @for (item of navItems; track item.id) {
+      <button
+        class="mobile-nav-btn nav-button-reset"
+        type="button"
+        [class.active]="item.id === currentPage"
+        (click)="navigate(item.id)"
+      >
+        {{ item.label }}
+      </button>
+    }
+    <button class="mobile-cta nav-button-reset" type="button" (click)="navigate('contact')">
+      Get a Free Quote
+    </button>
+  </div>
+}

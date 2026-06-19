@@ -1,31 +1,82 @@
 <section class="page-section">
   <section class="page-hero page-hero-centered">
-    <div class="sec-label">What We Offer</div>
-    <h1 class="sec-title services-title">All Our Signage Services</h1>
-    <p class="sec-sub services-sub">
-      Manufactured in-house at our Karimnagar workshop with quality materials and experienced
-      craftsmen.
+    <div class="sec-label">Our Work</div>
+    <h1 class="sec-title">Our Signage Projects</h1>
+    <p class="sec-sub">
+      Explore the range of premium sign boards we design, fabricate, and install — all in-house at
+      our Karimnagar workshop.
     </p>
   </section>
 
-  <section class="section section-services">
-    <div class="services-grid">
-      @for (service of services; track service.title) {
-        <article class="svc-card">
-          <div class="svc-icon" [innerHTML]="service.icon"></div>
-          <h3 class="svc-card-title">{{ service.title }}</h3>
-          <p class="svc-card-copy">{{ service.description }}</p>
+  <section class="section section-projects">
+    <div class="projects-grid">
+      @for (item of projects; track item.title) {
+        <article class="proj-card">
+          <div class="proj-body">
+            @if (item.images.length > 0) {
+              <img class="proj-img" [src]="item.images[0]" [alt]="item.title" />
+            } @else {
+              <span class="proj-icon" [innerHTML]="item.icon"></span>
+              <p class="proj-name">{{ item.title }}</p>
+            }
+          </div>
+          <div class="proj-footer">
+            <div class="proj-meta">
+              <span class="proj-title-text">{{ item.title }}</span>
+            </div>
+            <button class="proj-view-btn" type="button" (click)="openModal(item)">
+              View &#8594;
+            </button>
+          </div>
         </article>
       }
     </div>
+
     <div class="section-cta">
-      <button
-        class="btn-primary nav-button-reset"
-        type="button"
-        (click)="pageChange.emit('contact')"
-      >
+      <button class="btn-primary nav-button-reset" type="button" (click)="pageChange.emit('contact')">
         Get a Free Quote &#8594;
       </button>
     </div>
   </section>
 </section>
+
+<!-- Modal -->
+@if (activeCategory()) {
+  <div class="modal-backdrop" (click)="onBackdropClick($event)">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">{{ activeCategory()!.title }}</h2>
+        <button class="modal-close" (click)="closeModal()" aria-label="Close">&#10005;</button>
+      </div>
+      <div class="modal-body">
+        @if (activeCategory()!.images.length > 0) {
+          <div class="modal-grid">
+            @for (img of activeCategory()!.images; track img) {
+              <img class="modal-img" [src]="img" [alt]="activeCategory()!.title" (click)="openLightbox(img)" />
+            }
+          </div>
+        } @else {
+          <div class="modal-empty">
+            <span class="modal-empty-icon" [innerHTML]="activeCategory()!.icon"></span>
+            <p>Photos coming soon for <strong>{{ activeCategory()!.title }}</strong>.</p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+}
+
+<!-- Lightbox -->
+@if (activeImage()) {
+  <div class="lightbox-backdrop" (click)="closeLightbox()">
+    <img class="lightbox-img" [src]="activeImage()!" alt="Full view" (click)="$event.stopPropagation()" />
+    @if ((activeCategory()?.images?.length ?? 0) > 1) {
+      <button class="lightbox-nav lightbox-prev" (click)="$event.stopPropagation(); prevImage()" aria-label="Previous">&#8592;</button>
+      <button class="lightbox-nav lightbox-next" (click)="$event.stopPropagation(); nextImage()" aria-label="Next">&#8594;</button>
+      <div class="lightbox-counter" (click)="$event.stopPropagation()">
+        {{ activeImageIndex() + 1 }} / {{ activeCategory()!.images.length }}
+      </div>
+    }
+    <button class="lightbox-close" (click)="closeLightbox()" aria-label="Close">&#10005;</button>
+  </div>
+}

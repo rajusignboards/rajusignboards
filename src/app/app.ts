@@ -1,9 +1,9 @@
 import { afterNextRender, Component, HostListener, signal } from '@angular/core';
 
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
-import { GalleryPageComponent } from './components/gallery-page/gallery-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { JourneyPageComponent } from './components/journey-page/journey-page.component';
+import { ProcessPageComponent } from './components/process-page/process-page.component';
 import { ServicesPageComponent } from './components/services-page/services-page.component';
 import { SiteHeaderComponent } from './components/site-header/site-header.component';
 import { PageId } from './site-data';
@@ -16,7 +16,7 @@ import { PageId } from './site-data';
     HomePageComponent,
     ServicesPageComponent,
     JourneyPageComponent,
-    GalleryPageComponent,
+    ProcessPageComponent,
     ContactPageComponent,
   ],
   templateUrl: './app.html',
@@ -24,7 +24,7 @@ import { PageId } from './site-data';
 })
 export class App {
   protected readonly currentPage = signal<PageId>('home');
-  private readonly sectionIds: PageId[] = ['home', 'services', 'journey', 'gallery', 'contact'];
+  private readonly sectionIds: PageId[] = ['home', 'services', 'journey', 'process', 'contact'];
 
   constructor() {
     afterNextRender(() => {
@@ -48,12 +48,8 @@ export class App {
 
     for (const sectionId of this.sectionIds) {
       const element = document.getElementById(sectionId);
-      if (!element) {
-        continue;
-      }
-
-      const top = element.getBoundingClientRect().top;
-      if (top - offset <= 0) {
+      if (!element) continue;
+      if (element.getBoundingClientRect().top - offset <= 0) {
         activeSection = sectionId;
       }
     }

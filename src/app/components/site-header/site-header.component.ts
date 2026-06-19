@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, signal } from '@angular/core';
 
 import { NAV_ITEMS, PageId } from '../../site-data';
 
@@ -13,4 +13,14 @@ export class SiteHeaderComponent {
   @Output() pageChange = new EventEmitter<PageId>();
 
   protected readonly navItems = NAV_ITEMS;
+  protected menuOpen = signal(false);
+
+  toggleMenu(): void {
+    this.menuOpen.set(!this.menuOpen());
+  }
+
+  navigate(page: PageId): void {
+    this.pageChange.emit(page);
+    this.menuOpen.set(false);
+  }
 }

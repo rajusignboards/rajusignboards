@@ -1,4 +1,4 @@
-export type PageId = 'home' | 'services' | 'journey' | 'gallery' | 'contact';
+export type PageId = 'home' | 'services' | 'journey' | 'process' | 'contact';
 
 export interface NavItem {
   id: PageId;
@@ -23,13 +23,6 @@ export interface TimelineItem {
   description: string;
 }
 
-export interface GalleryItem {
-  icon: string;
-  title: string;
-  tag: string;
-  images: string[];
-}
-
 export interface ContactInfoItem {
   icon: string;
   label: string;
@@ -42,11 +35,70 @@ export interface FooterContactItem {
   value: string;
 }
 
+export interface GalleryItem {
+  icon: string;
+  title: string;
+  images: string[];
+}
+
+export const GALLERY_ITEMS: GalleryItem[] = [
+  {
+    icon: '&#127970;',
+    title: 'Glass & ACP Cladding',
+    images: [],
+  },
+  {
+    icon: '&#128167;',
+    title: 'Liquid LED Letters',
+    images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781798013/WhatsApp_Image_2026-06-18_at_21.05.45_if1oq7.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798156/WhatsApp_Image_2026-06-18_at_21.05.47_bxotdi.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798109/WhatsApp_Image_2026-06-18_at_21.05.46_qtdy1r.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798110/WhatsApp_Image_2026-06-18_at_21.05.45_1_cwydir.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798108/WhatsApp_Image_2026-06-18_at_21.05.48_q6ncv9.jpg'],
+  },
+  {
+    icon: '&#128161;',
+    title: 'LED Channel Letters',
+    images: [],
+  },
+  {
+    icon: '&#128679;',
+    title: 'Structure Boards',
+    images: [],
+  }, 
+  {
+    icon: '&#128679;',
+    title: 'Pylon Boards',
+    images: [],
+  },  
+  {
+    icon: '&#10024;',
+    title: 'Neon & Acrylic Signs',
+    images: [],
+  },
+  {
+    icon: '&#128250;',
+    title: 'Digital LED Displays',
+    images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781871278/LED_Display_1_llyagr.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781871278/LED_Display_2_fv7fva.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781871278/LED_Display_3_syceeu.jpg'],
+  },
+  {
+    icon: '&#128293;',
+    title: 'Shop Front Boards',
+    images: [],
+  },
+  {
+    icon: '&#129691;',
+    title: 'Flex & Vinyl Boards',
+    images: [],
+  },
+  {
+    icon: '&#128081;',
+    title: 'Interior Branding',
+    images: [],
+  },
+];
+
 export const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'Home' },
   { id: 'services', label: 'Services' },
   { id: 'journey', label: 'Journey' },
-  { id: 'gallery', label: 'Gallery' },
+  { id: 'process', label: 'Work Process' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -217,17 +269,6 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
   },
 ];
 
-export const GALLERY_ITEMS: GalleryItem[] = [
-  { icon: '&#127970;', title: 'Glass & ACP Cladding', tag: 'Glass & ACP Cladding', images: [] },
-  { icon: '&#128161;', title: 'Liquid LED Letters', tag: 'Liquid LED Letters', images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781798013/WhatsApp_Image_2026-06-18_at_21.05.45_if1oq7.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798110/WhatsApp_Image_2026-06-18_at_21.05.45_1_cwydir.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798109/WhatsApp_Image_2026-06-18_at_21.05.46_qtdy1r.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798156/WhatsApp_Image_2026-06-18_at_21.05.47_bxotdi.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798108/WhatsApp_Image_2026-06-18_at_21.05.48_q6ncv9.jpg'] },
-  { icon: '&#128161;', title: 'LED Channel Letters', tag: 'LED Letters', images: [] },
-  { icon: '&#128292;', title: '3D Acrylic Letters', tag: '3D Letters', images: [] },
-  { icon: '&#128250;', title: 'Digital LED Display', tag: 'Digital Board', images: [] },
-  { icon: '&#129691;', title: 'Shop Front Board', tag: 'Shop Boards', images: [] },
-  { icon: '&#128293;', title: 'Backlit Lightbox', tag: 'Backlit', images: [] },
-  { icon: '&#127991;&#65039;', title: 'Interior Branding', tag: 'Interior Branding', images: [] },
-];
-
 export const CONTACT_INFO: ContactInfoItem[] = [
   {
     icon: '&#128205;',
@@ -258,7 +299,7 @@ export const FOOTER_SERVICES = [
   'Interior Branding',
 ];
 
-export const FOOTER_COMPANY = ['Home', 'Our Journey', 'Gallery', 'Contact Us'];
+export const FOOTER_COMPANY = ['Home', 'Our Journey', 'Contact Us'];
 
 export const FOOTER_CONTACTS: FooterContactItem[] = [
   {
