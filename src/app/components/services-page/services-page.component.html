@@ -1,10 +1,10 @@
-<section class="page-section">
+<section class="page-section" aria-label="Sign Board Services and Projects">
   <section class="page-hero page-hero-centered">
     <div class="sec-label">Our Work</div>
-    <h1 class="sec-title">Our Signage Projects</h1>
+    <h2 class="sec-title">Our Sign Board Projects</h2>
     <p class="sec-sub">
-      Explore the range of premium sign boards we design, fabricate, and install — all in-house at
-      our Karimnagar workshop.
+      Explore our portfolio of LED sign boards, ACP cladding, glow signs, neon boards and shop
+      fronts — all designed, fabricated and installed in-house at our Karimnagar workshop.
     </p>
   </section>
 
@@ -14,7 +14,13 @@
         <article class="proj-card">
           <div class="proj-body">
             @if (item.images.length > 0) {
-              <img class="proj-img" [src]="item.images[0]" [alt]="item.title" />
+              <img
+                class="proj-img"
+                [src]="item.images[0]"
+                [alt]="item.title + ' — Raju Sign Boards, Karimnagar, Telangana'"
+                loading="lazy"
+                decoding="async"
+              />
             } @else {
               <span class="proj-icon" [innerHTML]="item.icon"></span>
               <p class="proj-name">{{ item.title }}</p>
@@ -33,7 +39,11 @@
     </div>
 
     <div class="section-cta">
-      <button class="btn-primary nav-button-reset" type="button" (click)="pageChange.emit('contact')">
+      <button
+        class="btn-primary nav-button-reset"
+        type="button"
+        (click)="pageChange.emit('contact')"
+      >
         Get a Free Quote &#8594;
       </button>
     </div>
@@ -52,13 +62,23 @@
         @if (activeCategory()!.images.length > 0) {
           <div class="modal-grid">
             @for (img of activeCategory()!.images; track img) {
-              <img class="modal-img" [src]="img" [alt]="activeCategory()!.title" (click)="openLightbox(img)" />
+              <img
+                class="modal-img"
+                [src]="img"
+                [alt]="activeCategory()!.title + ' — Raju Sign Boards'"
+                loading="lazy"
+                decoding="async"
+                (click)="openLightbox(img)"
+              />
             }
           </div>
         } @else {
           <div class="modal-empty">
             <span class="modal-empty-icon" [innerHTML]="activeCategory()!.icon"></span>
-            <p>Photos coming soon for <strong>{{ activeCategory()!.title }}</strong>.</p>
+            <p>
+              Photos coming soon for <strong>{{ activeCategory()!.title }}</strong
+              >.
+            </p>
           </div>
         }
       </div>
@@ -69,10 +89,27 @@
 <!-- Lightbox -->
 @if (activeImage()) {
   <div class="lightbox-backdrop" (click)="closeLightbox()">
-    <img class="lightbox-img" [src]="activeImage()!" alt="Full view" (click)="$event.stopPropagation()" />
+    <img
+      class="lightbox-img"
+      [src]="activeImage()!"
+      alt="Full view"
+      (click)="$event.stopPropagation()"
+    />
     @if ((activeCategory()?.images?.length ?? 0) > 1) {
-      <button class="lightbox-nav lightbox-prev" (click)="$event.stopPropagation(); prevImage()" aria-label="Previous">&#8592;</button>
-      <button class="lightbox-nav lightbox-next" (click)="$event.stopPropagation(); nextImage()" aria-label="Next">&#8594;</button>
+      <button
+        class="lightbox-nav lightbox-prev"
+        (click)="$event.stopPropagation(); prevImage()"
+        aria-label="Previous"
+      >
+        &#8592;
+      </button>
+      <button
+        class="lightbox-nav lightbox-next"
+        (click)="$event.stopPropagation(); nextImage()"
+        aria-label="Next"
+      >
+        &#8594;
+      </button>
       <div class="lightbox-counter" (click)="$event.stopPropagation()">
         {{ activeImageIndex() + 1 }} / {{ activeCategory()!.images.length }}
       </div>

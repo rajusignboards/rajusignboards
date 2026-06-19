@@ -28,6 +28,7 @@ export interface ContactInfoItem {
   label: string;
   value: string;
   subtext: string;
+  href?: string;
 }
 
 export interface FooterContactItem {
@@ -194,10 +195,10 @@ export const WHY_ITEMS: StatItem[] = [
 ];
 
 export const WHY_DESCRIPTIONS = [
-  'Deep expertise in all types of signage manufacturing.',
-  'From small shops to large commercial buildings.',
-  'Most sign boards delivered within 1 week.',
-  'We stand by our work with a 1-year free service.',
+  'Deep expertise in LED, ACP, glow signs, neon boards and flex signage manufacturing.',
+  'Serving small shops, restaurants, hospitals and large commercial buildings across multiple districts in Telangana.',
+  'Most LED sign boards designed, fabricated and installed within 1 week.',
+  'Every sign board comes with 12 months of free maintenance and after-sales support.',
 ];
 
 export const SERVICE_TICKERS = [
@@ -223,7 +224,7 @@ export const TIMELINE_ITEMS: TimelineItem[] = [
     yearLabel: 'First Milestone',
     title: '100 projects completed',
     description:
-      'Word of mouth spread quickly. We crossed our first 100 clients and hired our first team of 5 skilled fabricators.',
+      'Word of mouth spread quickly. We crossed our first 100 clients and hired our first team of 3 skilled fabricators.',
   },
   {
     shortYear: '2012',
@@ -273,14 +274,22 @@ export const CONTACT_INFO: ContactInfoItem[] = [
   {
     icon: '&#128205;',
     label: 'Location',
-    value: 'Karimnagar, Telangana',
-    subtext: '',
+    value: 'Alkapuri Colony, Road No. 4, Karimnagar — 505001, Telangana',
+    subtext: 'Serving Telangana &amp; Andhra Pradesh',
+  },
+  {
+    icon: '&#128222;',
+    label: 'Phone',
+    value: '+91 99599 22757',
+    subtext: 'Call or WhatsApp us',
+    href: 'tel:+917702722757',
   },
   {
     icon: '&#9993;&#65039;',
     label: 'Email',
     value: 'rajusignboards@gmail.com',
     subtext: '',
+    href: 'mailto:rajusignboards@gmail.com',
   },
   {
     icon: '&#128336;',
@@ -304,8 +313,9 @@ export const FOOTER_COMPANY = ['Home', 'Our Journey', 'Contact Us'];
 export const FOOTER_CONTACTS: FooterContactItem[] = [
   {
     label: 'Address',
-    value: 'Alkapuri Colony, Road no 4,\nKarimnagar - 505001, Telangana',
+    value: 'Alkapuri Colony, Road No. 4,\nKarimnagar — 505001, Telangana',
   },
+  { label: 'Phone', value: '+91 99599 22757' },
   { label: 'Email', value: 'rajusignboards@gmail.com' },
   { label: 'Hours', value: 'Mon - Sat: 9 AM - 7 PM\nSunday: Closed' },
 ];

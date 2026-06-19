@@ -36,7 +36,6 @@
 }
 
 .contact-copy {
-  max-width: 480px;
   margin: 0 auto;
   color: #64748b;
   font-size: 15px;
@@ -71,7 +70,7 @@
 .info-card {
   display: flex;
   gap: 14px;
-  align-items: flex-start;
+  align-items: center;
   padding: 20px 22px;
   border-radius: 16px;
   transition: border-color 0.2s, box-shadow 0.2s;

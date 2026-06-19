@@ -1,14 +1,13 @@
-<footer class="site-footer">
+<footer class="site-footer" itemscope itemtype="https://schema.org/LocalBusiness">
   <div class="footer-top">
     <div class="footer-grid">
       <div>
         <div class="fb-logo">
-          <img class="logo-img" src="logo.png" alt="Raju Sign Boards" />
-          <span class="fb-logo-text"><span class="fb-logo-accent">Raju</span> Sign Boards</span>
+          <img class="logo-img" src="logo.png" alt="Raju Sign Boards — LED &amp; ACP Sign Board Manufacturers" width="40" height="40" />
+          <span class="fb-logo-text" itemprop="name"><span class="fb-logo-accent">Raju</span> Sign Boards</span>
         </div>
-        <p class="fp">
-          Karimnagar's trusted LED sign board manufacturer since 2008. We design, fabricate, and
-          install premium signage for businesses of all sizes.
+        <p class="fp" itemprop="description">
+          Trusted LED &amp; ACP sign board manufacturers serving Telangana since 2008. We design, fabricate and install premium sign boards — LED signs, glow boards, neon signs, shop fronts and more.
         </p>
         <div class="certs">
           <span class="cert">Est. 2008</span>
@@ -18,7 +17,7 @@
       </div>
 
       <div class="fc">
-        <h4 class="footer-column-title">Services</h4>
+        <h3 class="footer-column-title">Services</h3>
         <ul class="footer-list nav-list-reset">
           @for (item of footerServices; track item) {
             <li class="footer-list-item">
@@ -35,7 +34,7 @@
       </div>
 
       <div class="fc">
-        <h4 class="footer-column-title">Company</h4>
+        <h3 class="footer-column-title">Company</h3>
         <ul class="footer-list nav-list-reset">
           @for (item of footerCompany; track item; let i = $index) {
             <li class="footer-list-item">
@@ -52,21 +51,57 @@
       </div>
 
       <div class="fc">
-        <h4 class="footer-column-title">Contact Details</h4>
-        <div class="fci">
+        <h3 class="footer-column-title">Contact Details</h3>
+        <address class="fci" style="font-style: normal;" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
           @for (item of footerContacts; track item.label) {
             <div class="fci-item">
               <div class="fci-dot"></div>
               <div class="fci-text">
                 <span class="fci-text-label">{{ item.label }}</span>
-                <span
-                  class="fci-text-value"
-                  [innerHTML]="item.value.replaceAll('\n', '<br />')"
-                ></span>
+                @if (item.label === 'Phone') {
+                  <a
+                    class="fci-text-value"
+                    href="tel:+917702722757"
+                    itemprop="telephone"
+                    style="text-decoration: none;"
+                  >{{ item.value }}</a>
+                } @else if (item.label === 'Email') {
+                  <a
+                    class="fci-text-value"
+                    href="mailto:rajusignboards@gmail.com"
+                    itemprop="email"
+                    style="text-decoration: none;"
+                  >{{ item.value }}</a>
+                } @else if (item.label === 'Address') {
+                  <span
+                    class="fci-text-value"
+                    itemprop="streetAddress"
+                    [innerHTML]="item.value.replaceAll('\n', '<br />')"
+                  ></span>
+                } @else {
+                  <span
+                    class="fci-text-value"
+                    [innerHTML]="item.value.replaceAll('\n', '<br />')"
+                  ></span>
+                }
               </div>
             </div>
           }
-        </div>
+          <div class="fci-item">
+            <div class="fci-dot"></div>
+            <div class="fci-text">
+              <span class="fci-text-label">WhatsApp</span>
+              <a
+                class="fci-text-value"
+                href="https://wa.me/917702722757"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat with Raju Sign Boards on WhatsApp"
+                style="text-decoration: none;"
+              >+91 77027 22757</a>
+            </div>
+          </div>
+        </address>
       </div>
     </div>
   </div>
@@ -75,13 +110,12 @@
 
   <div class="footer-bottom">
     <p class="footer-bottom-copy">
-      &copy; 2026 Raju Sign Boards - Karimnagar, Telangana, India. All rights
-      reserved.
+      &copy; 2026 Raju Sign Boards &mdash; Karimnagar, Telangana, India. All rights reserved.
     </p>
     <div class="fbl">
-      <a class="footer-bottom-link" href="#">Privacy Policy</a>
-      <a class="footer-bottom-link" href="#">Terms of Service</a>
-      <a class="footer-bottom-link" href="#">Sitemap</a>
+      <a class="footer-bottom-link" href="/privacy-policy">Privacy Policy</a>
+      <a class="footer-bottom-link" href="/terms-of-service">Terms of Service</a>
+      <a class="footer-bottom-link" href="/sitemap.xml">Sitemap</a>
     </div>
   </div>
 </footer>

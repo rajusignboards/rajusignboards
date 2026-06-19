@@ -24,6 +24,7 @@ import { PageId } from './site-data';
 })
 export class App {
   protected readonly currentPage = signal<PageId>('home');
+  protected readonly showScrollTop = signal(false);
   private readonly sectionIds: PageId[] = ['home', 'services', 'journey', 'process', 'contact'];
 
   constructor() {
@@ -37,9 +38,16 @@ export class App {
     document.getElementById(page)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  protected scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   @HostListener('window:scroll')
   protected onWindowScroll(): void {
     this.updateCurrentSection();
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    this.showScrollTop.set(total > 0 && (scrolled / total) * 100 > 30);
   }
 
   private updateCurrentSection(): void {

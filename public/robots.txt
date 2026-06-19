@@ -1,0 +1,15 @@
+# robots.txt — Raju Sign Boards
+# https://www.rajusignboards.in
+
+User-agent: *
+Allow: /
+
+# Block common non-content paths
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://www.rajusignboards.in/sitemap.xml
+
+# Crawl-delay (optional, polite request for bots)
+# Crawl-delay: 1

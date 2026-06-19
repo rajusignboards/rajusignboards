@@ -1,57 +1,62 @@
 <section class="page-section">
   <section class="contact-hero">
-    <div class="badge-pill">Free site visit & quote within 24 hours</div>
-    <h1 class="contact-title">
+    <div class="badge-pill">Free site visit &amp; quote within 24 hours</div>
+    <h2 class="contact-title">
       Get in Touch with
       <br />
       <span class="contact-title-accent">Raju Sign Boards</span>
-    </h1>
+    </h2>
     <p class="contact-copy">
-      Tell us what you need and our team will reach out with a free quote and site visit.
+      Looking for sign board makers in Telangana? Tell us what you need and our team
+      will reach out with a free quote and site visit.
     </p>
   </section>
 
-  <section class="contact-body">
+  <section class="contact-body" aria-label="Contact information and enquiry form">
     <div class="contact-grid">
-      <div class="info-cards">
+      <address class="info-cards" style="font-style: normal;">
         @for (item of contactInfo; track item.label) {
           <article class="info-card">
             <div class="ic-icon" [innerHTML]="item.icon"></div>
             <div>
               <div class="ic-label">{{ item.label }}</div>
-              <div class="ic-val">{{ item.value }}</div>
-              <div class="ic-sub">{{ item.subtext }}</div>
+              @if (item.href) {
+                <a class="ic-val" [href]="item.href" [innerHTML]="item.value" style="color: inherit; text-decoration: none;"></a>
+              } @else {
+                <div class="ic-val" [innerHTML]="item.value.replaceAll('\n', '<br />')"></div>
+              }
+              <div class="ic-sub" [innerHTML]="item.subtext"></div>
             </div>
           </article>
         }
 
-        <a class="wa-btn nav-button-reset" href="https://wa.me/917702722757" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+        <a class="wa-btn nav-button-reset" href="https://wa.me/917702722757" target="_blank" rel="noopener noreferrer" aria-label="Chat with Raju Sign Boards on WhatsApp" style="text-decoration: none;">
           <span class="wa-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24"><rect width="48" height="48" rx="10" fill="#25D366"/><path fill="#fff" d="M24 11C16.82 11 11 16.82 11 24c0 2.49.69 4.82 1.88 6.82L11 37l6.36-1.85A13 13 0 0 0 24 37c7.18 0 13-5.82 13-13S31.18 11 24 11zm0 23.5a10.8 10.8 0 0 1-5.5-1.51l-.39-.23-4.06.97 1-3.94-.26-.41A10.77 10.77 0 0 1 13.25 24C13.25 17.51 18.51 12.25 24 12.25S34.75 17.51 34.75 24 29.49 34.75 24 34.75zm5.89-8.02c-.32-.16-1.91-.94-2.21-1.05-.3-.11-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.26-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.86-1.61-1.92-1.8-2.24-.19-.32-.02-.49.14-.65.15-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.57-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.54-.73-.55l-.62-.01c-.21 0-.57.08-.86.4-.3.32-1.13 1.1-1.13 2.7s1.16 3.13 1.32 3.35c.16.21 2.28 3.48 5.52 4.88.77.33 1.37.53 1.84.68.77.25 1.48.21 2.04.13.62-.09 1.91-.78 2.18-1.53.27-.75.27-1.4.19-1.53-.08-.13-.3-.21-.62-.37z"/></svg></span>
           Chat on WhatsApp
         </a>
-      </div>
+      </address>
 
-      <form #contactForm (submit)="onSubmit($event, contactForm)" class="form-card">
+      <form #contactForm (submit)="onSubmit($event, contactForm)" class="form-card" aria-label="Sign board enquiry form">
         <input type="hidden" name="_subject" value="New Enquiry from Raju Sign Boards Website!">
         <input type="hidden" name="_captcha" value="false">
-        <h2 class="form-title">Send us an enquiry</h2>
+        <h3 class="form-title">Send us an enquiry</h3>
         <p class="form-copy">Fill in the details and our team will get back to you shortly.</p>
 
         <div class="form-row">
           <div class="ff">
-            <label class="ff-label" for="name">Your Name <span style="color: #ef4444">*</span></label>
-            <input class="ff-control" id="name" name="name" type="text" placeholder="e.g. Kiran" required />
+            <label class="ff-label" for="name">Your Name <span aria-hidden="true" style="color: #ef4444">*</span></label>
+            <input class="ff-control" id="name" name="name" type="text" placeholder="e.g. Kiran" required autocomplete="name" />
           </div>
           <div class="ff">
-            <label class="ff-label" for="phone">Phone Number <span style="color: #ef4444">*</span></label>
-            <input class="ff-control" id="phone" name="phone" type="tel" placeholder="e.g. 95590 55922" required />
+            <label class="ff-label" for="phone">Phone Number <span aria-hidden="true" style="color: #ef4444">*</span></label>
+            <input class="ff-control" id="phone" name="phone" type="tel" placeholder="e.g. 95590 55922" required autocomplete="tel" />
           </div>
         </div>
 
         <div class="form-row">
           <div class="ff">
-            <label class="ff-label" for="email">Email <span style="color: #ef4444">*</span></label>
-            <input class="ff-control" id="email" name="email" type="email" placeholder="e.g. laxmi@gmail.com" required />
+            <label class="ff-label" for="email">Email <span aria-hidden="true" style="color: #ef4444">*</span></label>
+            <input class="ff-control" id="email" name="email" type="email" placeholder="e.g. laxmi@gmail.com" required autocomplete="email" />
           </div>
           <div class="ff">
             <label class="ff-label" for="business">Business / Shop Name</label>
@@ -60,7 +65,8 @@
               id="business"
               name="business"
               type="text"
-              placeholder="e.g. Gen Tech Solutions" 
+              placeholder="e.g. Gen Tech Solutions"
+              autocomplete="organization"
             />
           </div>
         </div>
@@ -69,7 +75,7 @@
           <label class="ff-label" for="sign-type">Type of Sign Board</label>
           <select class="ff-control" id="sign-type" name="sign_type">
             <option class="ff-option" value="">Select what you need...</option>
-            <option class="ff-option">Glass & ACP Cladding</option>
+            <option class="ff-option">Glass &amp; ACP Cladding</option>
             <option class="ff-option">Liquid LED Letters</option>
             <option class="ff-option">LED Channel Letters</option>
             <option class="ff-option">Neon / Acrylic Sign</option>
@@ -99,21 +105,21 @@
         </button>
 
         @if (submitStatus === 'success') {
-          <div class="status-msg success-msg">Your enquiry has been sent successfully! We will contact you soon.</div>
+          <div class="status-msg success-msg" role="alert">Your enquiry has been sent successfully! We will contact you soon.</div>
         }
         @if (submitStatus === 'error') {
-          <div class="status-msg error-msg">Something went wrong. Please try again or contact us directly on WhatsApp.</div>
+          <div class="status-msg error-msg" role="alert">Something went wrong. Please try again or contact us directly on WhatsApp.</div>
         }
       </form>
     </div>
   </section>
 
-  <section class="map-strip">
+  <section class="map-strip" aria-label="Our location on Google Maps">
     <div class="map-embed-shell">
       <iframe
         class="map-embed-frame"
         [src]="googleMapsEmbedUrl"
-        title="Raju Sign Boards location map"
+        title="Raju Sign Boards — Alkapuri Colony, Road No. 4, Karimnagar, Telangana"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
