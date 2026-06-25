@@ -47,6 +47,8 @@ export class HomePageComponent {
         return;
       }
 
+      const startsOnMobileLoad = window.matchMedia('(max-width: 768px)').matches;
+
       elements.forEach((element) => {
         const parts = this.getCountParts(element);
         element.textContent = this.formatCountValue(0, parts.prefix, parts.suffix);
@@ -67,7 +69,14 @@ export class HomePageComponent {
         { threshold: 0.35, rootMargin: '0px 0px -8% 0px' },
       );
 
-      elements.forEach((element) => this.countObserver?.observe(element));
+      elements.forEach((element) => {
+        if (startsOnMobileLoad && element.dataset['countStart'] === 'mobile-load') {
+          this.animateCount(element);
+          return;
+        }
+
+        this.countObserver?.observe(element);
+      });
     });
   }
 

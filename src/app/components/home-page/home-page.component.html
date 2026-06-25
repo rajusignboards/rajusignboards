@@ -35,7 +35,12 @@
         <div class="hero-stats">
           @for (stat of heroStats; track stat.label) {
             <div>
-              <div class="stat-val" #countUpNumber [attr.data-count-value]="stat.value">
+              <div
+                class="stat-val"
+                #countUpNumber
+                [attr.data-count-value]="stat.value"
+                data-count-start="mobile-load"
+              >
                 {{ stat.value }}
               </div>
               <div class="stat-lbl">{{ stat.label }}</div>
