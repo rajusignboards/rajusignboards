@@ -46,52 +46,105 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     icon: '&#127970;',
     title: 'Glass & ACP Cladding',
-    images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781953750/WhatsApp_Image_2026-06-20_at_14.37.40_bei6nd.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781953751/WhatsApp_Image_2026-06-20_at_14.37.40_1_sxhsut.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781953751/WhatsApp_Image_2026-06-20_at_14.34.03_vho8km.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781953750/WhatsApp_Image_2026-06-20_at_14.34.01_s5rs7s.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781953750/WhatsApp_Image_2026-06-20_at_14.37.38_f1m6jh.jpg'],
+    images: [
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781953750/WhatsApp_Image_2026-06-20_at_14.37.40_bei6nd.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781953751/WhatsApp_Image_2026-06-20_at_14.37.40_1_sxhsut.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781953751/WhatsApp_Image_2026-06-20_at_14.34.03_vho8km.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781953750/WhatsApp_Image_2026-06-20_at_14.34.01_s5rs7s.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781953750/WhatsApp_Image_2026-06-20_at_14.37.38_f1m6jh.jpg',
+    ],
   },
   {
     icon: '&#128167;',
     title: 'Liquid LED Letters',
-    images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781798013/WhatsApp_Image_2026-06-18_at_21.05.45_if1oq7.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798156/WhatsApp_Image_2026-06-18_at_21.05.47_bxotdi.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798109/WhatsApp_Image_2026-06-18_at_21.05.46_qtdy1r.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798110/WhatsApp_Image_2026-06-18_at_21.05.45_1_cwydir.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781798108/WhatsApp_Image_2026-06-18_at_21.05.48_q6ncv9.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781846247/WhatsApp_Image_2026-06-18_at_22.30.00_sd9rhe.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781944141/WhatsApp_Image_2026-06-20_at_13.50.08_p0dqog.jpg'],
+    images: [
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781798013/WhatsApp_Image_2026-06-18_at_21.05.45_if1oq7.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781798156/WhatsApp_Image_2026-06-18_at_21.05.47_bxotdi.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781798109/WhatsApp_Image_2026-06-18_at_21.05.46_qtdy1r.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781798110/WhatsApp_Image_2026-06-18_at_21.05.45_1_cwydir.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781798108/WhatsApp_Image_2026-06-18_at_21.05.48_q6ncv9.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781846247/WhatsApp_Image_2026-06-18_at_22.30.00_sd9rhe.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781944141/WhatsApp_Image_2026-06-20_at_13.50.08_p0dqog.jpg',
+    ],
   },
   {
     icon: '&#128161;',
     title: 'LED Channel Letters',
-    images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781846247/WhatsApp_Image_2026-06-18_at_22.30.57_ppdjxz.jpg'],
+    images: [
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781846247/WhatsApp_Image_2026-06-18_at_22.30.57_ppdjxz.jpg',
+    ],
   },
   {
     icon: '&#128679;',
     title: 'Structure Boards',
-    images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781942759/IMG-20210426-WA1507_v5dmmx.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942761/IMG-20210426-WA0434_nmq5nx.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781944141/WhatsApp_Image_2026-06-20_at_13.49.45_z4fbsp.jpg'],
-  }, 
+    images: [
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942759/IMG-20210426-WA1507_v5dmmx.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942761/IMG-20210426-WA0434_nmq5nx.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781944141/WhatsApp_Image_2026-06-20_at_13.49.45_z4fbsp.jpg',
+    ],
+  },
   {
     icon: '&#128679;',
     title: 'Pylon Boards',
-    images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781846247/WhatsApp_Image_2026-06-18_at_22.31.13_qkwux7.jpg'],
-  },  
+    images: [
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781846247/WhatsApp_Image_2026-06-18_at_22.31.13_qkwux7.jpg',
+    ],
+  },
   {
     icon: '&#10024;',
     title: 'Neon & Acrylic Signs',
-    images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781943217/WhatsApp_Image_2026-06-20_at_13.43.18_dfjjnp.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942761/IMG-20210427-WA0151_na6uh0.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942762/20210929_184549_flyezz.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942762/IMG_20230106_194014_ycpnhm.jpg',''],
+    images: [
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781943217/WhatsApp_Image_2026-06-20_at_13.43.18_dfjjnp.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942761/IMG-20210427-WA0151_na6uh0.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942762/20210929_184549_flyezz.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942762/IMG_20230106_194014_ycpnhm.jpg',
+      '',
+    ],
   },
   {
     icon: '&#128250;',
     title: 'Digital LED Displays',
-    images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781871278/LED_Display_1_llyagr.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781871278/LED_Display_2_fv7fva.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781871278/LED_Display_3_syceeu.jpg'],
+    images: [
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781871278/LED_Display_1_llyagr.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781871278/LED_Display_2_fv7fva.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781871278/LED_Display_3_syceeu.jpg',
+    ],
   },
   {
     icon: '&#128293;',
     title: 'Shop Front Boards',
-    images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781942759/IMG-20210426-WA1478_gxiage.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942761/IMG-20210426-WA1382_vshc2d.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942761/IMG-20210426-WA1320_vks9oi.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942761/IMG-20210426-WA1322_ujjg3s.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942760/IMG-20210426-WA1276_q8wcxx.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942760/IMG-20210426-WA1544_ubj9xe.jpg'],
+    images: [
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942759/IMG-20210426-WA1478_gxiage.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942761/IMG-20210426-WA1382_vshc2d.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942761/IMG-20210426-WA1320_vks9oi.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942761/IMG-20210426-WA1322_ujjg3s.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942760/IMG-20210426-WA1276_q8wcxx.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942760/IMG-20210426-WA1544_ubj9xe.jpg',
+    ],
   },
   {
     icon: '&#129691;',
     title: 'Flex & Vinyl Boards',
-    images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781942760/IMG-20210426-WA1310_zugxcs.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781943070/WhatsApp_Image_2026-06-18_at_22.29.12_wqfqyn.jpg'],
+    images: [
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942760/IMG-20210426-WA1310_zugxcs.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781943070/WhatsApp_Image_2026-06-18_at_22.29.12_wqfqyn.jpg',
+    ],
   },
   {
     icon: '&#128081;',
     title: 'Interior Branding',
-    images: ['https://res.cloudinary.com/dterfi0mb/image/upload/v1781942759/IMG-20210426-WA1167_cufnqv.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942760/IMG-20210426-WA1137_m2xtmm.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942759/IMG-20210426-WA1174_aegats.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942760/IMG-20210426-WA1254_oihegv.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942761/IMG-20210426-WA1432_b3tljp.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781942759/IMG-20210426-WA1139_vuzenp.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781943005/WhatsApp_Image_2026-06-18_at_22.09.04_uttvnm.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781944142/WhatsApp_Image_2026-06-20_at_13.48.41_p7fthd.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781944141/WhatsApp_Image_2026-06-20_at_13.57.14_of6men.jpg','https://res.cloudinary.com/dterfi0mb/image/upload/v1781944141/WhatsApp_Image_2026-06-20_at_13.48.57_y8fan2.jpg'],
+    images: [
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942759/IMG-20210426-WA1167_cufnqv.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942760/IMG-20210426-WA1137_m2xtmm.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942759/IMG-20210426-WA1174_aegats.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942760/IMG-20210426-WA1254_oihegv.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942761/IMG-20210426-WA1432_b3tljp.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781942759/IMG-20210426-WA1139_vuzenp.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781943005/WhatsApp_Image_2026-06-18_at_22.09.04_uttvnm.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781944142/WhatsApp_Image_2026-06-20_at_13.48.41_p7fthd.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781944141/WhatsApp_Image_2026-06-20_at_13.57.14_of6men.jpg',
+      'https://res.cloudinary.com/dterfi0mb/image/upload/v1781944141/WhatsApp_Image_2026-06-20_at_13.48.57_y8fan2.jpg',
+    ],
   },
 ];
 
@@ -137,8 +190,7 @@ export const ALL_SERVICES: ServiceItem[] = [
   {
     icon: '&#127970;',
     title: 'Glass & ACP Cladding',
-    description:
-      'Durable and stylish cladding solutions for commercial facades.', 
+    description: 'Durable and stylish cladding solutions for commercial facades.',
   },
   {
     icon: '&#128161;',
@@ -184,7 +236,7 @@ export const ALL_SERVICES: ServiceItem[] = [
     title: 'Interior Branding',
     description:
       'Custom interior signage solutions including wayfinding, wall graphics, and branded decor.',
-  }
+  },
 ];
 
 export const WHY_ITEMS: StatItem[] = [
@@ -282,7 +334,7 @@ export const CONTACT_INFO: ContactInfoItem[] = [
     label: 'Phone',
     value: '+91 99599 22757',
     subtext: 'Call or WhatsApp us',
-    href: 'tel:+917702722757',
+    href: 'tel:+919959922757',
   },
   {
     icon: '&#9993;&#65039;',
