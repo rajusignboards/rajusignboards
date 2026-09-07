@@ -42,7 +42,7 @@ export class ContactPageComponent {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/s.laxmiprasad2006@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/suraramrajendraprasad@gmail.com', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
